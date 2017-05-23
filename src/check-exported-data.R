@@ -11,7 +11,7 @@ provider <- read_csv("./lists/green-deal-orb/Providers_2017_05_12.csv") %>%
   mutate(type = "provider")
 installer <- read_csv("./lists/green-deal-orb/Installers_2017_05_12.csv") %>%
   rename(ID = `Certification ID`) %>%
-  mutate(type = "provider")
+  mutate(type = "installer")
 
 participant <- bind_rows(assessor, provider, installer)
 
