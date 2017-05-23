@@ -14,6 +14,8 @@ qualifying_energy_improvements_url %>%
   html_text() %>%
   str_sub(end = -2L) %>%
   data_frame(`qualifying-energy-improvement` = .) %>%
+  # Add an item from the amendment http://www.legislation.gov.uk/uksi/2014/2020/article/2/made
+  bind_rows(data_frame(`qualifying-energy-improvement` = "circulator pumps")) %>%
   arrange(`qualifying-energy-improvement`) %>%
   write_tsv("./lists/legislation/qualifying-energy-improvement.tsv")
 
