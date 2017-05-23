@@ -149,3 +149,16 @@ participant %>%
   arrange(desc(n)) %>%
   select(n, everything()) %>%
   write_csv("temp.csv")
+
+# There's a measure "Water", which might be a truncated version of "Water source
+# heat pumps" -- which companies have it, so that we can check them against the
+# website?
+participant %>%
+  unnest %>%
+  filter(`Measures offered` == "Water")
+#        ID                                        `Organisation Name`
+#     <chr>                                                      <chr>
+# 1 GDPA270                          Housing Action Management Limited
+# 2 GDPA188 Neil Pittam Electrical Installations Ltd t/a U need Energy
+# 3 GDPA124                                       Local Energy Limited
+# Confirmed, "Water" is a truncation of "Water source heat pumps".
