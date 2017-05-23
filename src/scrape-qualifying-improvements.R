@@ -14,6 +14,7 @@ qualifying_energy_improvements_url %>%
   html_text() %>%
   str_sub(end = -2L) %>%
   data_frame(`qualifying-energy-improvement` = .) %>%
+  arrange(`qualifying-energy-improvement`) %>%
   write_tsv("./lists/legislation/qualifying-energy-improvement.tsv")
 
 specified_energy_efficiency_improvements_url %>%
@@ -22,4 +23,5 @@ specified_energy_efficiency_improvements_url %>%
   html_text() %>%
   str_sub(end = -2L) %>%
   data_frame(`specified-energy-efficiency-improvement` = .) %>%
+  arrange(`specified-energy-efficiency-improvement`) %>%
   write_tsv("./lists/legislation/specified-energy-efficiency-improvement.tsv")
