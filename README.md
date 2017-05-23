@@ -1,6 +1,12 @@
 [Data](https://github.com/openregister/green-deal-data/blob/master/data/)
 for the green-deal registers.
 
+## Participant export
+
+Most of the data for assessors, providers and installers can be
+[exported](http://gdorb.decc.gov.uk/green-deal-participant-register/participant-export)
+from the website in csv files.
+
 ## assessors
 
 Green Deal assessors are responsible for assessing properties that want to apply
